@@ -1,0 +1,14 @@
+.head{
+	background-color: skyblue;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px 100px 0px 0px;
+}
+.eye
+{
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	margin: 100px;
+}
