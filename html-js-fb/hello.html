@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CODE BY : RAHUL DUTTA >> 
+    LINKEDIN : https://www.linkedin.com/in/irahuldutta02/
+    GIT HUB : https://github.com/irahuldutta02 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/irahuldutta02/dynamic-images/main/persons/rahul-dutta-dp-1.jpg">
+    <title>OSBSIP-LEVEL-2-TASK-1 || CALCULATOR</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .back-ground {
+            background: rgb(14, 46, 59);
+            background: linear-gradient(180deg,
+                    rgba(14, 46, 59, 1) 0%,
+                    rgba(22, 102, 120, 1) 50%,
+                    rgba(125, 185, 179, 1) 65%,
+                    rgba(216, 215, 195, 1) 77%);
+            bottom: 0;
+            left: -50%;
+            opacity: 0.5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .calculator {
+            margin-top: 23px;
+            background: rgba(22, 102, 120, 1);
+            padding: 1px;
+            text-decoration: rgba(125, 185, 179, 1);
+            border-radius: 10px;
+            font-size: 48px;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        input {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            border: 3px solid rgba(125, 185, 179, 1);
+            font-size: 18px;
+            font-weight: bolder;
+            width: 100px;
+            height: 65px;
+            background-color: rgba(216, 215, 195, 1);
+            margin: 5px;
+            transition-duration: 0.5s;
+        }
+
+        input:hover {
+            background-color: rgba(14, 46, 59, 1);
+            color: white;
+            font-size: 25px;
+        }
+
+        #display {
+            background-color: rgba(216, 215, 195, 1);
+            width: 450px;
+            font-size: 45px;
+            padding: 2px;
+            margin: 0%;
+            color: black;
+        }
+
+        button {
+            border-radius: 10px;
+            font-size: 10px;
+            background: rgba(216, 215, 195, 1);
+            width: 10px;
+            height: 10px;
+            margin: 4px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(14, 46, 59, 1);
+            padding: 23px;
+            border-radius: 10px;
+            border: 4px;
+            display: inline-block;
+            max-width: 550px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            contain: content;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(14, 46, 59, 1);
+        }
+
+        .button-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* self-icon-css */
+        #myBtn {
+            position: fixed;
+            height: 40px;
+            width: 40px;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-image: url(https://raw.githubusercontent.com/irahuldutta02/dynamic-images/main/persons/rahul-dutta-dp-1.jpg);
+            background-size: cover;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid rgba(14, 46, 59, 1);
+            transition-duration: 0.5s;
+        }
+
+        #myBtn:hover {
+            height: 50px;
+            width: 50px;
+        }
+
+        /* self-icon-css */
+    </style>
+</head>
+
+<body>
+
+    <div class="back-ground"></div>
+    <div class="back-ground"></div>
+    <div class="back-ground"></div>
+
+    </div>
+
+    <div class="container">
+        <div class="calculator_display"></div>
+        <input type="text" name="display" id="display">
+        <div class="calculator">
+            <table>
+                <tr>
+                    <td><input type="button" value="(" onclick="add('(')">
+                    <td><input type="button" value=")" onclick="add(')')">
+                    <td><input class="button-text" type="button" value="<--" onclick="back()">
+                    <td><input class="button-text" type="button" value="C" onclick="clearDisplay()">
+
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="add('7')">
+                    <td><input type="button" value="8" onclick="add('8')">
+                    <td><input type="button" value="9" onclick="add('9')">
+                    <td><input type="button" value="X" onclick="add('*')">
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="add('4')">
+                    <td><input type="button" value="5" onclick="add('5')">
+                    <td><input type="button" value="6" onclick="add('6')">
+                    <td><input type="button" value="-" onclick="add('-')">
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="add('1')">
+                    <td><input type="button" value="2" onclick="add('2')">
+
+                    <td><input type="button" value="3" onclick="add('3')">
+                    <td><input type="button" value="+" onclick="add('+')">
+
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="add('0')">
+                    <td><input type="button" value="." onclick="add('.')">
+                    <td><input type="button" value="/" onclick="add('/')">
+                    <td><input type="button" value="=" onclick="result()">
+                </tr>
+            </table>
+        </div>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+    <!-- self-icon -->
+    <a target="_blank" href="https://www.linkedin.com/in/irahuldutta02/" id="myBtn"></a>
+    <!-- self-icon -->
+
+    <script>
+        function add(n) {
+            if (document.getElementById('display').value == "") {
+                document.getElementById('display').value = n
+            }
+            else {
+                document.getElementById('display').value += n
+            }
+        }
+
+        function back() {
+            var value = document.getElementById('display').value;
+            document.getElementById('display').value = value.substr(0, value.length - 1);
+        }
+
+        function result() {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = ' '
+        }
+
+    </script>
+
+</body>
+
+</html>
